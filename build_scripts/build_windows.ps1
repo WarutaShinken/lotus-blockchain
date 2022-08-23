@@ -15,22 +15,23 @@ pyinstaller --log-level INFO $SPEC_FILE
 Write-Output "   ---"
 Write-Output "Copy lotus executables to lotus-blockchain-gui\"
 Write-Output "   ---"
-Copy-Item "dist\daemon" -Destination "..\lotus-blockchain-gui\packages\gui\" -Recurse
+#Copy-Item "dist\daemon" -Destination "..\lotus-blockchain-gui\packages\gui\" -Recurse
 
 Write-Output "   ---"
 Write-Output "Setup npm packager"
 Write-Output "   ---"
-Set-Location -Path ".\npm_windows" -PassThru
-Set-Location -Path "..\" -PassThru
+#Set-Location -Path ".\npm_windows" -PassThru
+#Set-Location -Path "..\" -PassThru
 
-Set-Location -Path "..\lotus-blockchain-gui" -PassThru
+#Set-Location -Path "..\lotus-blockchain-gui" -PassThru
 
 git status
 
 git status
 
 # Change to the GUI directory
-Set-Location -Path "packages\gui" -PassThru
+#Set-Location -Path "packages\gui" -PassThru
+Set-Location -Path "dist\daemon" -PassThru
 
 Write-Output "   ---"
 Write-Output "Increase the stack for lotus command for (lotus plots create) chiapos limitations"
@@ -50,7 +51,7 @@ git status
 Write-Output "   ---"
 Write-Output "Moving final binaries to expected location"
 Write-Output "   ---"
-Copy-Item ".\Lotus-win32-x64" -Destination "$env:GITHUB_WORKSPACE\" -Recurse
+Copy-Item "." -Destination "$env:GITHUB_WORKSPACE\" -Recurse
 
 Write-Output "   ---"
 Write-Output "Windows CLI complete"
