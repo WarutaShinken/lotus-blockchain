@@ -51,7 +51,7 @@ git status
 Write-Output "   ---"
 Write-Output "Moving final binaries to expected location"
 Write-Output "   ---"
-Copy-Item "." -Destination "$env:GITHUB_WORKSPACE\" -Recurse
+Copy-Item "." -Destination "$env:GITHUB_WORKSPACE\Lotus-win32-x64\" -Recurse
 
 Write-Output "   ---"
 Write-Output "Windows CLI complete"
