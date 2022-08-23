@@ -48,10 +48,10 @@ git status
 git status
 
 Write-Output "   ---"
-Write-Output "Moving final installers to expected location"
+Write-Output "Moving final binaries to expected location"
 Write-Output "   ---"
 Copy-Item ".\Lotus-win32-x64" -Destination "$env:GITHUB_WORKSPACE\" -Recurse
 
 Write-Output "   ---"
-Write-Output "Windows Installer complete"
+Write-Output "Windows CLI complete"
 Write-Output "   ---"

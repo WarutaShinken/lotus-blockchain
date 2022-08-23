@@ -107,7 +107,7 @@ venv\scripts\pip install --extra-index-url https://pypi.chia.net/simple/ miniupn
 venv\scripts\pip install --editable ".$extras_cli" --extra-index-url https://pypi.chia.net/simple/
 
 Write-Output ""
-Write-Output "Chia blockchain .\Install.ps1 complete."
+Write-Output "Lotus blockchain .\Install.ps1 complete."
 Write-Output ""
 Write-Output "Try the Quick Start Guide to running lotus-blockchain:"
 Write-Output "https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide"
